@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Full implementation of all subclasses of Abstract class "Model"
+Full implementation of all methods of Abstract class "Model"
 """
 
 import tensorflow as tf
