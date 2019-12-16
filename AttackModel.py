@@ -146,11 +146,12 @@ def runAttacks(models_list):
 #        print("")
         
                 
+        #Random ATTACK (0 SNR inputs)
         print("Running random attack:")
         probs_random = np.max(sess.run(model.predict(tf.convert_to_tensor(model.X_random))), 1)
         print('Prob. that ', model.params_dict['name'], ' < 0.9 on random data: ', np.mean(probs_random<0.9))
         
-        #Noise ATTACK (garbage inputs)
+        #Noise ATTACK (low SNR inputs)
         print("Running Noise attack:")
         att_params = {'clip_min': model.minval, 'clip_max':model.maxval, 'eps':noise_eps}
         probs_noise, junk, X_adv = wbAttack(model, Noise, att_params, model.X_valid, model.Y_valid)
