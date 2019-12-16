@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This defines a general "Model", i.e. architecture and decoding operations. It is an abstract base class for all models, 
-e.g. the baselins softmax model or the ensemble Tanh model
+e.g. the baseline softmax model or the ensemble Tanh model
 """
 
 import tensorflow as tf
