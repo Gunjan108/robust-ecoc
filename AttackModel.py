@@ -154,7 +154,6 @@ def runAttacks(models_list):
         print("Running Noise attack:")
         att_params = {'clip_min': model.minval, 'clip_max':model.maxval, 'eps':noise_eps}
         probs_noise, junk, X_adv = wbAttack(model, Noise, att_params, model.X_valid, model.Y_valid)
-        #print("Mean distortion: ", np.mean(np.abs(X_adv - model.X_valid[0:100])))
         print("")
         
     return probs_benign, probs_adv, probs_noise
